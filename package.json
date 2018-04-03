@@ -24,7 +24,7 @@
   },
   "license": "MIT",
   "lint-staged": {
-    "*.{js,ts,json,vue}": ["yarn format", "git add"]
+    "*.{js,json}": ["yarn format", "git add"]
   },
   "private": true,
   "scripts": {
