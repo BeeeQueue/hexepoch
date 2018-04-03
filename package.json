@@ -17,6 +17,19 @@
     "lint-staged": "^7.0.3",
     "prettier": "^1.11.1"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "license": "MIT",
-  "private": true
+  "lint-staged": {
+    "*.{js,ts,json,vue}": ["yarn format", "git add"]
+  },
+  "private": true,
+  "scripts": {
+    "build": "gulp",
+    "dev": "gulp watch",
+    "format": "prettier --write"
+  }
 }
