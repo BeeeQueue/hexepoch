@@ -1,8 +1,11 @@
 const Gulp = require('gulp')
+const Autoprefixer = require('gulp-autoprefixer')
 const Babel = require('gulp-babel')
 const CleanCSS = require('gulp-clean-css')
 const Pug = require('gulp-pug')
 const Uglify = require('gulp-uglify')
+
+const browserList = ['last 10 versions', 'ie >= 9', 'safari >= 7']
 
 Gulp.task('html', () =>
   Gulp.src('src/**/*.pug')
@@ -13,6 +16,7 @@ Gulp.task('html', () =>
 Gulp.task('css', () =>
   Gulp.src('src/**/*.css')
     .pipe(CleanCSS())
+    .pipe(Autoprefixer({ browsers: browserList }))
     .pipe(Gulp.dest('dist'))
 )
 
@@ -25,7 +29,7 @@ Gulp.task('js', () =>
             '@babel/env',
             {
               targets: {
-                browsers: ['last 10 versions', 'ie >= 9', 'safari >= 7'],
+                browsers: browserList,
               },
             },
           ],
