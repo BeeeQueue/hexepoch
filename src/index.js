@@ -7,7 +7,7 @@ function update() {
 
   // Get the color using substring and set the background to it
   const color = `#${now.substring(3, 9)}`
-  app.style.background = color
+  app.style.backgroundColor = color
 
   // Iterate through each number
   now.split('').forEach((num, i) => {

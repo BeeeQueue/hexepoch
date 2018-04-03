@@ -16,7 +16,7 @@ html, body, #app {
   font-size: 5vw;
   font-family: "Roboto", sans-serif;
 
-  transition: background 5s;
+  transition: background-color 5s;
 }
 
 #container {

@@ -9,7 +9,8 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
 
     link(href='https://fonts.googleapis.com/css?family=Roboto:300', rel='stylesheet')
-    link(href='index.css', rel='stylesheet')
+    link(href='/index.css', rel='stylesheet')
+    link(href='/hexepoch/index.css', rel='stylesheet')
 
   body
     #app
@@ -25,4 +26,5 @@ html(lang="en")
         each i in arr
           span.number(id=i)=i
 
-    script(src='index.js')
+    script(async src='/index.js')
+    script(async src='/hexepoch/index.js')
