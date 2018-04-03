@@ -1,1 +1,1 @@
-"use strict";var e=document.querySelectorAll(".number"),r=document.getElementById("app");setInterval(function(){var n=Date.now().toString(),t="#".concat(n.substring(3,9));r.style.background=t,n.split("").forEach(function(n,t){e[t].innerHTML!==n&&(e[t].innerHTML=n)})},33);
+"use strict";var e=document.querySelectorAll(".number"),r=document.getElementById("app");setInterval(function(){var n=Date.now().toString(),t="#".concat(n.substring(3,9));r.style.backgroundColor=t,n.split("").forEach(function(n,t){e[t].innerHTML!==n&&(e[t].innerHTML=n)})},33);
