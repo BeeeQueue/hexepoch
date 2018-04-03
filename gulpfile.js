@@ -20,10 +20,23 @@ Gulp.task('js', () =>
   Gulp.src('src/**/*.js')
     .pipe(
       Babel({
-        presets: ['env'],
+        presets: [
+          [
+            '@babel/env',
+            {
+              targets: {
+                browsers: ['last 10 versions', 'ie >= 9', 'safari >= 7'],
+              },
+            },
+          ],
+        ],
       })
     )
-    .pipe(Uglify())
+    .pipe(
+      Uglify({
+        toplevel: true,
+      })
+    )
     .pipe(Gulp.dest('dist'))
 )
 
