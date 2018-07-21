@@ -1,0 +1,13 @@
+{
+  "liveServer.settings.port": 3000,
+  "liveServer.settings.donotVerifyTags": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.host": "127.0.0.1",
+  "liveServer.settings.root": "/",
+  "liveServer.settings.proxy": {
+    "enable": true,
+    "baseUri": "/hexepoch",
+    "proxyUri": "http://127.0.0.1:3000/dist"
+  },
+  "liveServer.settings.ignoreFiles": [".vscode/**", "src/**/*"]
+}

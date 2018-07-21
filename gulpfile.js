@@ -44,8 +44,10 @@ Gulp.task('js', () =>
     .pipe(Gulp.dest('dist'))
 )
 
-Gulp.task('rest', () => Gulp.src('src/**/*.svg').pipe(Gulp.dest('dist')))
-
-Gulp.task('watch', () => Gulp.watch('src/**/*', ['default']))
+Gulp.task('rest', () =>
+  Gulp.src(['src/**/*.svg', 'src/**/*.ico']).pipe(Gulp.dest('dist'))
+)
 
 Gulp.task('default', ['html', 'css', 'js', 'rest'])
+
+Gulp.task('watch', ['default'], () => Gulp.watch('src/**/*', ['default']))
